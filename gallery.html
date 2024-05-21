@@ -63,25 +63,59 @@
         </div>
     </div>
     <section class="gallery">
+        <div class="categories">
+            <button class="category-btn active" data-filter="all">All</button>
+            <button class="category-btn" data-filter="wedding">Wedding</button>
+            <button class="category-btn" data-filter="outdoor">Outdoor</button>
+            <button class="category-btn" data-filter="portrait">Portrait</button>
+        </div>
         <ul class="images">
-            <li class="img"><img src="images/img-4.jpg" alt="img"></li>
-            <li class="img"><img src="images/img-5.jpg" alt="img"></li>
-            <li class="img"><img src="images/img-7.jpg" alt="img"></li>
-            <li class="img"><img src="images/img-1.jpg" alt="img"></li>
-            <li class="img"><img src="images/img-15.jpg" alt="img"></li>
-            <li class="img"><img src="images/img-2.jpg" alt="img"></li>
-            <li class="img"><img src="images/img-11.jpg" alt="img"></li>
-            <li class="img"><img src="images/img-3.jpg" alt="img"></li>
-            <li class="img"><img src="images/img-8.jpg" alt="img"></li>
-            <li class="img"><img src="images/img-9.jpg" alt="img"></li>
-            <li class="img"><img src="images/img-10.jpg" alt="img"></li>
-            <li class="img"><img src="images/img-12.jpg" alt="img"></li>
-            <li class="img"><img src="images/img-13.jpg" alt="img"></li>
-            <li class="img"><img src="images/img-15.jpg" alt="img"></li>
-            <li class="img"><img src="images/img-6.jpg" alt="img"></li>
+            <li class="img" data-category="wedding"><img src="images/img-4.jpg" alt="img"></li>
+            <li class="img" data-category="wedding"><img src="images/img-5.jpg" alt="img"></li>
+            <li class="img" data-category="wedding"><img src="images/img-7.jpg" alt="img"></li>
+            <li class="img" data-category="portrait"><img src="images/img-1.jpg" alt="img"></li>
+            <li class="img" data-category="outdoor"><img src="images/img-15.jpg" alt="img"></li>
+            <li class="img" data-category="wedding"><img src="images/img-2.jpg" alt="img"></li>
+            <li class="img" data-category="portrait"><img src="images/img-11.jpg" alt="img"></li>
+            <li class="img" data-category="outdoor"><img src="images/img-3.jpg" alt="img"></li>
+            <li class="img" data-category="portrait"><img src="images/img-8.jpg" alt="img"></li>
+            <li class="img" data-category="wedding"><img src="images/img-9.jpg" alt="img"></li>
+            <li class="img" data-category="outdoor"><img src="images/img-10.jpg" alt="img"></li>
+            <li class="img" data-category="portrait"><img src="images/img-12.jpg" alt="img"></li>
+            <li class="img" data-category="wedding"><img src="images/img-13.jpg" alt="img"></li>
+            <li class="img" data-category="outdoor"><img src="images/img-15.jpg" alt="img"></li>
+            <li class="img" data-category="portrait"><img src="images/img-6.jpg" alt="img"></li>
         </ul>
-
     </section>
+    
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.category-btn');
+    const images = document.querySelectorAll('.img');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            const filter = this.getAttribute('data-filter');
+
+            images.forEach(img => {
+                if (filter === 'all' || img.getAttribute('data-category') === filter) {
+                    img.classList.add('show');
+                } else {
+                    img.classList.remove('show');
+                }
+            });
+        });
+    });
+
+    // Trigger initial filter to show all images
+    document.querySelector('.category-btn[data-filter="all"]').click();
+});
+
+    </script>
 </body>
 
 </html>
