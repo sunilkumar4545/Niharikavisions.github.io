@@ -9,7 +9,7 @@ window.addEventListener('scroll', function() {
       iconContainer.classList.remove('visible');
   }
 });
-/*PRE */
+/*PRE LOADER */
 document.addEventListener("DOMContentLoaded", function () {
   const preloader = document.getElementById("preloader");
   const loaderBar = document.getElementById("loader-bar");
