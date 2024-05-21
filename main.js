@@ -69,7 +69,7 @@ setTimeout(() => {
 
 // Submit button (for demonstration purposes)
 submitBtn.addEventListener('click', () => {
-  window.location.href("https://maps.app.goo.gl/deVe7WahFw2gN6a2A");
+  window.location.replace("https://maps.app.goo.gl/deVe7WahFw2gN6a2A");
   popup.style.display = 'none';
 });
 
