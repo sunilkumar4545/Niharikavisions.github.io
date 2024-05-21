@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const preloader = document.getElementById("preloader");
   const loaderBar = document.getElementById("loader-bar");
   const content = document.getElementById("content");
-  const minLoadTime = 5000; // Minimum preloader display time in milliseconds (5 seconds)
+  const minLoadTime = 2000; 
   const startTime = Date.now();
 
   // Function to update loader bar based on the load progress

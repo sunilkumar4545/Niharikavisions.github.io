@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery - Niharika Visions</title>
-    <meta name="description" content="Niharika Visions is a leading business in commercial photography. We specialize in outdoor photography, wedding photography, video shooting services, and more. Find our address, contact number, reviews, and photos.">
-    <meta name="keywords" content="Niharika Visions, commercial photographers, wedding photographers, outdoor photographers, video shooting services, photo studios, wedding planners, Ongole photography">
+    <meta name="description"
+        content="Niharika Visions is a leading business in commercial photography. We specialize in outdoor photography, wedding photography, video shooting services, and more. Find our address, contact number, reviews, and photos.">
+    <meta name="keywords"
+        content="Niharika Visions, commercial photographers, wedding photographers, outdoor photographers, video shooting services, photo studios, wedding planners, Ongole photography">
     <meta name="author" content="Niharika Visions">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="gallery.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -87,58 +91,58 @@
             <li class="img" data-category="portrait"><img src="images/img-6.jpg" alt="img"></li>
         </ul>
     </section>
-    
+
     </section>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-    const filterButtons = document.querySelectorAll('.category-btn');
-    const images = document.querySelectorAll('.img');
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.category-btn');
+            const images = document.querySelectorAll('.img');
 
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-            const filter = this.getAttribute('data-filter');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    const filter = this.getAttribute('data-filter');
 
-            images.forEach(img => {
-                if (filter === 'all' || img.getAttribute('data-category') === filter) {
-                    img.classList.add('show');
-                } else {
-                    img.classList.remove('show');
-                }
+                    images.forEach(img => {
+                        if (filter === 'all' || img.getAttribute('data-category') === filter) {
+                            img.classList.add('show');
+                        } else {
+                            img.classList.remove('show');
+                        }
+                    });
+                });
             });
-        });
-    });
 
-    // Trigger initial filter to show all images
-    document.querySelector('.category-btn[data-filter="all"]').click();
-});
+            // Trigger initial filter to show all images
+            document.querySelector('.category-btn[data-filter="all"]').click();
+        });
 
     </script>
     <script>
         //gallery
-const allImages = document.querySelectorAll(".images .img");
-const lightbox = document.querySelector(".lightbox");
-const closeImgBtn = lightbox.querySelector(".close-icon");
+        const allImages = document.querySelectorAll(".images .img");
+        const lightbox = document.querySelector(".lightbox");
+        const closeImgBtn = lightbox.querySelector(".close-icon");
 
-allImages.forEach(img => {
-    // Calling showLightBox function with passing clicked img src as argument
-    img.addEventListener("click", () => showLightbox(img.querySelector("img").src));
-});
+        allImages.forEach(img => {
+            // Calling showLightBox function with passing clicked img src as argument
+            img.addEventListener("click", () => showLightbox(img.querySelector("img").src));
+        });
 
-const showLightbox = (img) => {
-    // Showing lightbox and updating img source
-    lightbox.querySelector("img").src = img;
-    lightbox.classList.add("show");
-    document.body.style.overflow = "hidden";
-}
+        const showLightbox = (img) => {
+            // Showing lightbox and updating img source
+            lightbox.querySelector("img").src = img;
+            lightbox.classList.add("show");
+            document.body.style.overflow = "hidden";
+        }
 
-closeImgBtn.addEventListener("click", () => {
-    // Hiding lightbox on close icon click
-    lightbox.classList.remove("show");
-    document.body.style.overflow = "auto";
-});
+        closeImgBtn.addEventListener("click", () => {
+            // Hiding lightbox on close icon click
+            lightbox.classList.remove("show");
+            document.body.style.overflow = "auto";
+        });
     </script>
     <script src="./main.js"></script>
 </body>
