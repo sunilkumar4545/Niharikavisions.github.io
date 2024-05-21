@@ -9,29 +9,43 @@ window.addEventListener('scroll', function() {
       iconContainer.classList.remove('visible');
   }
 });
-
-// main.js
+/*PRE */
 document.addEventListener("DOMContentLoaded", function () {
   const preloader = document.getElementById("preloader");
+  const loaderBar = document.getElementById("loader-bar");
+  const content = document.getElementById("content");
   const minLoadTime = 5000; // Minimum preloader display time in milliseconds (5 seconds)
   const startTime = Date.now();
 
-  window.onload = function () {
-    const loadTime = Date.now() - startTime;
-    const remainingTime = minLoadTime - loadTime;
+  // Function to update loader bar based on the load progress
+  function updateLoader() {
+      const elapsedTime = Date.now() - startTime;
+      const percentage = Math.min((elapsedTime / minLoadTime) * 100, 100);
+      loaderBar.style.width = `${percentage}%`;
+  }
 
-    setTimeout(
-      () => {
-        preloader.style.opacity = "0";
-        setTimeout(() => {
-          preloader.style.display = "none";
-          document.body.style.overflow = "auto"; // Enable scrolling after preloader is gone
-        }, 1000); // Duration of the fade-out transition
-      },
-      remainingTime > 0 ? remainingTime : 0
-    );
+  // Update the loader every 100ms
+  const loaderInterval = setInterval(updateLoader, 100);
+
+  window.onload = function () {
+      const loadTime = Date.now() - startTime;
+      const remainingTime = minLoadTime - loadTime;
+
+      setTimeout(
+          () => {
+              clearInterval(loaderInterval); // Stop updating the loader bar
+              preloader.style.opacity = "0";
+              setTimeout(() => {
+                  preloader.style.display = "none";
+                  content.style.display = "block"; // Show the main content
+                  document.body.style.overflow = "auto"; // Enable scrolling after preloader is gone
+              }, 1000); // Duration of the fade-out transition
+          },
+          remainingTime > 0 ? remainingTime : 0
+      );
   };
 });
+
 // Get elements
 const popup = document.getElementById('rateUsPopup');
 const openPopupBtn = document.getElementById('openPopup');

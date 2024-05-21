@@ -31,6 +31,7 @@
   box-sizing: border-box;
 }
 
+/* Preloader Styles */
 #preloader {
   position: fixed;
   top: 0;
@@ -46,28 +47,33 @@
 
 #loader {
   width: 80%;
-  height: 4px;
+  max-width: 300px;
+  height: 10px;
   background: #ddd;
-  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
-#loader::before {
-  content: "";
-  position: absolute;
+#loader-bar {
   width: 0;
   height: 100%;
   background: #3498db;
   animation: load 3s infinite;
 }
 
+/* Keyframes for the loader animation */
 @keyframes load {
   0% {
-    width: 0;
+      width: 0;
   }
-
   100% {
-    width: 100%;
+      width: 100%;
   }
+}
+
+/* Content Hidden Initially */
+#content {
+  display: none;
 }
 
 .section__container {
