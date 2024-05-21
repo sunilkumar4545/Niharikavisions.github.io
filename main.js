@@ -1,6 +1,15 @@
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
+window.addEventListener('scroll', function() {
+  var iconContainer = document.getElementById('iconContainer');
+  if (window.scrollY > 800) { // Change 100 to the number of pixels from top to start displaying the icons
+      iconContainer.classList.add('visible');
+  } else {
+      iconContainer.classList.remove('visible');
+  }
+});
+
 // main.js
 document.addEventListener("DOMContentLoaded", function () {
   const preloader = document.getElementById("preloader");
@@ -23,6 +32,47 @@ document.addEventListener("DOMContentLoaded", function () {
     );
   };
 });
+// Get elements
+const popup = document.getElementById('rateUsPopup');
+const openPopupBtn = document.getElementById('openPopup');
+const closeBtn = document.querySelector('.close-btn');
+const stars = document.querySelectorAll('.star');
+const submitBtn = document.getElementById('submitRating');
+
+// Open popup
+openPopupBtn.addEventListener('click', () => {
+  popup.style.display = 'flex';
+});
+
+// Close popup
+closeBtn.addEventListener('click', () => {
+  popup.style.display = 'none';
+});
+
+// Star rating
+stars.forEach((star, index) => {
+  star.addEventListener('click', () => {
+    stars.forEach((s, i) => {
+      if (i <= index) {
+        s.classList.add('selected');
+      } else {
+        s.classList.remove('selected');
+      }
+    });
+  });
+});
+
+// Popup after 30 seconds
+setTimeout(() => {
+  popup.style.display = 'flex';
+}, 90000);
+
+// Submit button (for demonstration purposes)
+submitBtn.addEventListener('click', () => {
+  window.location.href("https://maps.app.goo.gl/deVe7WahFw2gN6a2A");
+  popup.style.display = 'none';
+});
+
 
 menuBtn.addEventListener("click", () => {
   navLinks.classList.toggle("open");
