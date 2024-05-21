@@ -512,7 +512,7 @@ h3{
 
 
 .icons {
-  top:50%;
+  top:70%;
   left: 0;
   transform: translateY(-50%);
   position: fixed;
@@ -529,10 +529,11 @@ h3{
   height: 30px;
   width: 30px;
   list-style-type:none;
-  padding-left: 12px;
-  padding-top: 10px;
+  padding-left: 10px;
+  padding-top: 5px;
   margin-top: 5px;
   color: #fff;
+  border-bottom-right-radius: 10px;
 }
 .facebook {
   
