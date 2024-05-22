@@ -29,9 +29,7 @@
   <link rel="stylesheet" href="footer.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
@@ -41,13 +39,13 @@
 </head>
 
 <body>
-  
-   <!-- Preloader -->
-   <div id="preloader">
+
+  <!-- Preloader -->
+  <!--<div id="preloader">
     <div id="loader">
-        <div id="loader-bar"></div>
+      <div id="loader-bar"></div>
     </div>
-</div>
+  </div>-->
   <div id="rateUsPopup" class="popup">
     <div class="popup-content">
       <span class="close-btn">&times;</span>
@@ -68,7 +66,7 @@
     <nav data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
       <div class="nav__bar">
         <div class="nav__logo">
-          <h3 style="color: aliceblue">Niharika Visions</h3>
+          <h3 style="color: aliceblue">Niharika <span style="color: #f6ac0f">Visions</span></h3>
           <!--<img src="assets/logo.png" alt="logo" />-->
         </div>
         <div class="nav__menu__btn" id="menu-btn">
@@ -90,7 +88,8 @@
       </ul>
     </nav>
     <div class="section__container header__container">
-      <div class="header__content">
+      <div class="header__content" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
+        data-aos-duration="1500">
         <h1>
           "Every Smile,<br />Every Tear,<br />
           Every Moment"
@@ -121,20 +120,20 @@
     </div>
   </section>
 
-  <section class="menu" id="menu">
+  <section class="menu" id="menu" >
     <div class="section__records menu__container">
       <ul class="menu__banner">
-        <li>
+        <li data-aos="zoom-out">
           <span><i class="fa fa-video-camera"></i></span>
           <h4>150+</h4>
           <p>Projects Completed</p>
         </li>
-        <li>
+        <li data-aos="zoom-out">
           <span><i class="fa fa-quote-right"></i></span>
           <h4>100%</h4>
           <p>Customer Satisfied</p>
         </li>
-        <li>
+        <li data-aos="zoom-out">
           <span><i class="ri-function-line"></i></span>
           <h4>20 Years</h4>
           <p>Experience In Photography</p>
@@ -197,7 +196,7 @@
       </div>
     </div>
   </div>
-  <section class="gallery">
+  <section class="gallery"  data-aos="fade-up" data-aos-duration="3000">
     <ul class="images">
       <li class="img" data-aos="fade-right" data-aos-duration="1000">
         <img src="images/img-4.jpg" alt="img" loading="lazy" />
@@ -211,7 +210,7 @@
       <li class="img" data-aos="zoom-in" data-aos-duration="1000">
         <img src="images/img-1.jpg" alt="img" loading="lazy" />
       </li>
-      <li class="img" data-aos="fade-left" data-aos-duration="1000">
+      <li class="img" >
         <img src="images/img-15.jpg" alt="img" loading="lazy" />
       </li>
       <li class="img" data-aos="fade-up" data-aos-duration="1000">
@@ -233,26 +232,7 @@
     </ul>
   </div>
 
-  <h3 id="feature" class="features">Features</h3>
-  <h2 class="future_title">Our Photography</h2>
-  <div class="card-list">
-    <a href="#" class="card-item" data-aos="fade-right" data-aos-duration="1500">
-      <img src="images/img-15.jpg" alt="Card Image">
-      <span class="developer">Candid photography</span>
-    </a>
-    <a href="#" class="card-item" data-aos="fade-left" data-aos-duration="1500">
-      <img src="images/img-16.jpg" alt="Card Image">
-      <span class="Event">Event photography</span>
-    </a>
-    <a href="#" class="card-item" data-aos="fade-up" data-aos-duration="3000">
-      <img src="images/img-11.jpg" alt="Card Image">
-      <span class="designer">Wedding photography</span>
-    </a>
-    <a href="#" class="card-item" data-aos="fade-up" data-aos-duration="3000">
-      <img src="images/img-1.jpg" alt="Card Image">
-      <span class="editor">Baby Photography</span>
-    </a>
-  </div>
+  
 
   <section class="instagram__container">
     <div class="section__header">Highlights</div>
@@ -280,9 +260,9 @@
       <img src="./images/img-10.jpg" alt="" />
     </div>
   </section>
-  
+
   <section class="video-section">
-    <h2 class="section-header">Our Videos</h2>
+    <h2 class="section-header">Event Films</h2>
     <div class="video-container">
       <div class="video-item">
         <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0"
@@ -296,12 +276,24 @@
       </div>
       <div class="video-item">
         <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
       </div>
     </div>
   </section>
 
+  <section class="section__container register__container"  >
+    <div class="register__grid">
+      <div class="register__content">
+
+        <h4 style="text-transform: capitalize;">Vist Our Youtube channel and watch the Weddings Films</h4>
+
+        <div class="register__btn">
+          <a href="https://www.youtube.com/@niharikaphotography" class="btnn">Click Here </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <h2 class="section__header" style="text-transform: capitalize">
     read what our customers love about us

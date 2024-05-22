@@ -82,7 +82,6 @@
   padding: 5rem 1rem;
   overflow: hidden;
 }
-
 .section__subheader {
   margin-bottom: 0.5rem;
   position: relative;
@@ -285,10 +284,10 @@ nav {
   border-radius: 8px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
   list-style: none;
-  cursor: pointer;
+  
   text-decoration: none;
   border: 2px solid transparent;
-  transition: border 0.5s ease;
+  
   border: 2px solid #F7DFF5;
 }
 
@@ -345,20 +344,10 @@ nav {
   }
 }
 
-
-
-
 .review {
   margin-top: 4px;
   margin-bottom: 40px;
 }
-
-
-
-
-
-
-
 
 @media (width > 768px) {
   nav {
@@ -405,19 +394,17 @@ nav {
 
 
 
-.register__grid {
+.register__grid{
   display: grid;
   background-color: var(--text-dark);
   border-radius: 1rem;
 }
-
 .register__content {
   margin-bottom: 1rem;
   padding-block: 4rem;
   padding-inline: 1rem;
   text-align: center;
 }
-
 .register__content h4 {
   margin-bottom: 2rem;
   font-size: 2rem;
@@ -426,7 +413,6 @@ nav {
   text-align: center;
   color: var(--white);
 }
-
 .btnn {
   padding: 1rem 1.5rem;
   outline: none;
@@ -441,14 +427,14 @@ nav {
 .btnn:hover {
   background-color: rgb(223, 235, 193);
 }
-
 .section__p {
   margin-left: 20px;
   text-align: center;
-
+ 
   font-size: 1rem;
   color: var(--text-dark);
 }
+
 
 
 
@@ -515,46 +501,6 @@ h3 {
 }
 
 
-.intro {
-  position: relative;
-  isolation: isolate;
-  background-color: #0f1a2c;
-  margin-top: 40px;
-}
-
-.intro::before {
-  position: absolute;
-  content: "";
-  right: 0;
-  height: 100%;
-  width: calc(100vw / 4);
-  background-color: #f6ac0f;
-  z-index: -1;
-
-}
-
-.intro__container {
-  display: grid;
-  gap: 4rem 2rem;
-
-}
-
-.intro__container .section__subheader {
-  color: #f6ac0f;
-
-
-}
-
-.intro__container :is(.section__header, .section__description) {
-  margin-bottom: 1rem;
-  color: var(--white);
-}
-
-.intro__video {
-  max-width: 450px;
-  margin: auto;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
-}
 
 
 
@@ -615,6 +561,7 @@ h3 {
   transform: translateY(-50%);
   position: fixed;
   z-index: 100;
+  
 }
 
 .icons.visible {
@@ -924,9 +871,9 @@ header .buttons i {
   width: 40px;
   cursor: pointer;
   display: inline-block;
-  color: #fff;
+  color: #f3eded;
   margin-left: 10px;
-  background: #6C757D;
+  background: #7cb9ee;
   font-size: 1.25rem;
   line-height: 40px;
   text-align: center;
@@ -949,7 +896,7 @@ header .buttons i:hover {
   height: 100%;
   object-fit: contain;
 }
-
+ 
 /* Responsive media query code */
 @media screen and (max-width: 688px) {
   .lightbox .wrapper {
