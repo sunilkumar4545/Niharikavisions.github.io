@@ -732,8 +732,7 @@ h2 {
   transition: color 0.3s;
 }
 
-.star:hover,
-.star:hover~.star,
+
 .star.selected {
   color: #f39c12;
 }
