@@ -18,40 +18,45 @@
 </head>
 
 <body>
+   
     <header class="header" id="home">
-        <nav>
-            <div class="nav__bar">
-                <div class="nav__logo">
-                    <h2 style="color: aliceblue;">Niharika Visions</h2>
-                    <!--<img src="assets/logo.png" alt="logo" />-->
-                </div>
-                <div class="nav__menu__btn" id="menu-btn">
-                    <i class="ri-menu-line"></i>
-                </div>
+        <nav data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+          <div class="nav__bar">
+            <div class="nav__logo">
+              <h3 style="color: aliceblue">Niharika <span style="color: #f6ac0f">Visions</span></h3>
+              <!--<img src="assets/logo.png" alt="logo" />-->
             </div>
-            <ul class="nav__links" id="nav-links">
-                <li><a href="./index.html#home">Home</a></li>
-                <li><a href="./index.html#team">Our Team</a></li>
-                <li><a href="./index.html#about">About</a></li>
-                <li class="nav__logo">
-                    <a href="./index.html">
-                        <h2>Niharika Visions</h2>
-                    </a>
-                </li>
-                <li><a href="#feature">Feature</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div class="nav__menu__btn" id="menu-btn">
+              <i class="ri-menu-line"></i>
+            </div>
+          </div>
+          <ul class="nav__links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#feature">Features</a></li>
+            <li><a href="#about">About</a></li>
+            <li class="nav__logo">
+              <a href="#">
+                <h2>Niharika <span style="color: #f6ac0f">Visions</span></h2>
+              </a>
+            </li>
+            <li><a href="#course_call">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </nav>
         <div class="section__container header__container">
-            <div class="header__content">
-                <h1>"Every Smile,<br />Every Tear,<br /> Every Moment"</h1>
-                <div class="header__btn">
-                </div>
+          <div class="header__content" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
+            data-aos-duration="1500">
+            <h1>
+              "Every Smile,<br />Every Tear,<br />
+              Every Moment"
+            </h1>
+            <div class="header__btn">
             </div>
+          </div>
         </div>
-    </header>
-    <h2>~ Wedding Photography Showcase ~</h2>
+      </header>
+    <h2>Wedding Photography Showcase </h2>
     <div class="lightbox">
         <div class="wrapper">
             <header>
@@ -69,7 +74,7 @@
     <section class="gallery">
         <div class="categories">
             <button class="category-btn active" data-filter="all">All</button>
-            <button class="category-btn" data-filter="wedding">Wedding</button>
+            <button class="category-btn" data-filter="wedding" >Wedding</button>
             <button class="category-btn" data-filter="outdoor">Outdoor</button>
             <button class="category-btn" data-filter="portrait">Portrait</button>
         </div>
@@ -92,7 +97,15 @@
         </ul>
     </section>
 </section>
-
+<div class="icons" id="iconContainer">
+    <ul>
+      <li class="facebook"><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+      <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+      <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+      <li class="instagram"><a href="#"><i class="fa fa-instagram"></i></a></li>
+      <li class="youtube"><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+    </ul>
+  </div>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const filterButtons = document.querySelectorAll('.category-btn');
@@ -142,6 +155,23 @@
             lightbox.classList.remove("show");
             document.body.style.overflow = "auto";
         });
+    </script>
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+const navLinks = document.getElementById("nav-links");
+const menuBtnIcon = menuBtn.querySelector("i");
+
+menuBtn.addEventListener("click", (e) => {
+  navLinks.classList.toggle("open");
+
+  const isOpen = navLinks.classList.contains("open");
+  menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
+});
+
+navLinks.addEventListener("click", (e) => {
+  navLinks.classList.remove("open");
+  menuBtnIcon.setAttribute("class", "ri-menu-line");
+});
     </script>
     <script src="./main.js"></script>
 </body>
