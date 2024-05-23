@@ -614,6 +614,10 @@ h3 {
   background-color: #ff4800;
 }
 
+.whatsapp{
+  background-color: green;
+}
+
 .icons ul li:hover {
   padding-left: 30px;
   width: 80px;
